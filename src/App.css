@@ -1,0 +1,20 @@
+.jodit-workplace {
+  width: 8.3in;
+  height: 11.7in;
+  padding: 1in;
+  margin: 1rem auto;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.jodit-toolbar__box {
+  display: flex;
+  justify-content: center;
+}
+
+.ck-reset button {
+  background: #4299e1 !important;
+  padding: 1.2rem !important;
+}
+.ck-reset button:hover {
+  background: #197cce !important;
+}
