@@ -1,5 +1,9 @@
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import "./App.css";
 import TextEditor from "./DocsGenerator/TextEditor";
+import NavBar from "./NavigationBar/NavBar";
+
+import FooterContent from "./Footer/FooterContent";
 
 function App() {
   const htmlContent = `<h1 style="text-align:center;">Tenant's Affidavit</h1>
@@ -47,6 +51,11 @@ function App() {
 
   return (
     <>
+      <ChakraProvider resetScope=".ck-reset">
+        <NavBar />
+        <FooterContent />
+      </ChakraProvider>
+
       <TextEditor generatedContent={htmlContent}></TextEditor>
     </>
   );
