@@ -1,0 +1,42 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns in the first row */
+  gap: 20px;
+}
+
+.outerdiv {
+  width: 80%;
+  margin: auto;
+}
+
+.heading1 {
+  font-size: 3rem;
+  font-weight: 200;
+  /* margin-left: 7%; */
+
+  margin-bottom: 2%;
+  font-weight: bold; /* Increase the font weight to make it bolder */
+  text-align: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  z-index: 1001;
+}

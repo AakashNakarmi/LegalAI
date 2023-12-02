@@ -6,23 +6,15 @@ import {
   Button,
   Stack,
   Collapse,
-  Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
 
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -55,14 +47,20 @@ const NavBar = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            fontWeight={"bold"}
-            color={useColorModeValue("gray.800", "white")}
-          >
-            LegalAI
-          </Text>
+          <Link to="/">
+            <Text
+              textAlign={useBreakpointValue({
+                base: "center",
+                md: "left",
+              })}
+              fontFamily={"heading"}
+              fontWeight={"bold"}
+              fontSize={"1.1rem"}
+              color={useColorModeValue("gray.800", "white")}
+            >
+              LegalAI
+            </Text>
+          </Link>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -75,7 +73,7 @@ const NavBar = () => {
           direction={"row"}
           spacing={6}
         >
-          <Button
+          {/* <Button
             as={"a"}
             fontSize={"sm"}
             fontWeight={400}
@@ -97,7 +95,7 @@ const NavBar = () => {
             }}
           >
             Sign Up
-          </Button>
+          </Button> */}
         </Stack>
       </Flex>
 
@@ -108,37 +106,4 @@ const NavBar = () => {
   );
 };
 
-interface NavItem {
-  label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
-  href?: string;
-}
-
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "Legal Doc Generator",
-    children: [
-      {
-        label: "Get Your Legal Document",
-
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Expert help",
-    children: [
-      {
-        label: "Book Your Legal Advisor",
-
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "About Us",
-    href: "#",
-  },
-];
 export default NavBar;

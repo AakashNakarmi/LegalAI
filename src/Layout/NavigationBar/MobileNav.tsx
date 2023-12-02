@@ -101,7 +101,7 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: "Get Your Legal Document",
 
-        href: "#",
+        href: "/DocGenerator",
       },
     ],
   },
@@ -111,13 +111,13 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: "Book Your Legal Advisor",
 
-        href: "#",
+        href: "/ExpertHelp",
       },
     ],
   },
   {
     label: "About Us",
-    href: "#",
+    href: "/AboutUs",
   },
 ];
 

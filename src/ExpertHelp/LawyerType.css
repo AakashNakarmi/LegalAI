@@ -1,0 +1,14 @@
+.heading {
+  font-size: 70px;
+  font-weight: 200;
+  margin-bottom: 2%;
+  margin-top: 2rem;
+}
+
+/* LawyerType.css */
+
+.heading {
+  font-size: 3rem; /* Adjust the font size as desired */
+  font-weight: bold; /* Increase the font weight to make it bolder */
+  text-align: center;
+}

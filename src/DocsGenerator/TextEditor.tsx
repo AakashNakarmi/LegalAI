@@ -12,7 +12,9 @@ const TextEditor = ({ generatedContent }: Props) => {
     <div>
       <JoditEditor
         className="jodit-component"
+        //value is required to display the html content sent from props
         value={content}
+        //onchange is required for making the realtime changes in the editor
         onChange={(value) => setContent(value)}
       />
     </div>
